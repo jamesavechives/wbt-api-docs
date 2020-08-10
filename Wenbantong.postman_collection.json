@@ -1,0 +1,886 @@
+{
+	"info": {
+		"_postman_id": "3121b9c5-8dc9-4d0a-ac85-6cc85ecd53c1",
+		"name": "Wenbantong",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login Via Phone Verification Code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "15622837716",
+							"description": "phone number",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "9494",
+							"description": "verify code",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/rest/{{version}}/wbt/phone_login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"rest",
+						"{{version}}",
+						"wbt",
+						"phone_login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login Via Phone Verification Code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "15622837716",
+									"description": "phone number",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "9494",
+									"description": "verify code",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/rest/{{version}}/wbt/phone_login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rest",
+								"{{version}}",
+								"wbt",
+								"phone_login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.16.0"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Aug 2020 01:37:08 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.19"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "PHPSESSID=c9a0557qd93vq3frlbhdtr0vds; expires=Mon, 10-Aug-2020 02:37:06 GMT; Max-Age=3600; path=/; domain=www.magen.com; HttpOnly"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"63etd64dsvsloxafdci53reyd78d1kba\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Receive verify code",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer 7s4ws4n9xkejpjyt80u7kbibybgm5u0f",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "15622837716",
+							"description": "Phone number",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "login",
+							"description": "登录:login,绑定手机号:bind",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/rest/{{version}}/wbt/verify_code",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"rest",
+						"{{version}}",
+						"wbt",
+						"verify_code"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Receive verify code",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer 7s4ws4n9xkejpjyt80u7kbibybgm5u0f",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "15622837716",
+									"description": "Phone number",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "login",
+									"description": "登录:login,绑定手机号:bind",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/rest/{{version}}/wbt/verify_code",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rest",
+								"{{version}}",
+								"wbt",
+								"verify_code"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.16.0"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Aug 2020 01:32:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.19"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "PHPSESSID=c9a0557qd93vq3frlbhdtr0vds; expires=Mon, 10-Aug-2020 02:32:34 GMT; Max-Age=3600; path=/; domain=www.magen.com; HttpOnly"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": 1 //1:success,0:fail\n}"
+				}
+			]
+		},
+		{
+			"name": "Wechat Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "13141",
+							"description": "Wechat login code",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/rest/{{version}}/wbt/wechat_login",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"rest",
+						"{{version}}",
+						"wbt",
+						"wechat_login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Wechat login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "code",
+									"value": "13141",
+									"description": "Wechat login code",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/rest/{{version}}/wbt/wechat_login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rest",
+								"{{version}}",
+								"wbt",
+								"wechat_login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.16.0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 08 Aug 2020 08:21:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.19"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "PHPSESSID=gh9svea45ntho5rs3ba8vvh2ag; expires=Sat, 08-Aug-2020 09:21:57 GMT; Max-Age=3600; path=/; domain=www.magen.com; HttpOnly"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"bound\": 1,//1:已绑定，0:未绑定\n    \"useid\": \"hhayy1\",//微信openid\n    \"token\": \"afaga\" //token\n}"
+				}
+			]
+		},
+		{
+			"name": "Bind Phone Number",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "phone",
+							"value": "15622837716",
+							"description": "Phone number",
+							"type": "text"
+						},
+						{
+							"key": "code",
+							"value": "9521",
+							"description": "Verify code",
+							"type": "text"
+						},
+						{
+							"key": "social_id",
+							"value": "wx54454511122nbs",
+							"description": "Wechat openid",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/rest/{{version}}/wbt/phone_bind",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"rest",
+						"{{version}}",
+						"wbt",
+						"phone_bind"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Bind Phone number",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "15622837716",
+									"description": "Phone number",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "9521",
+									"description": "Verify code",
+									"type": "text"
+								},
+								{
+									"key": "social_id",
+									"value": "wx54454511122nbs",
+									"description": "Wechat openid",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/rest/{{version}}/wbt/phone_bind",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rest",
+								"{{version}}",
+								"wbt",
+								"phone_bind"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.16.0"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Aug 2020 03:43:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.19"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "PHPSESSID=ki4dhtjn23bv0lg3e7gh10j23m; expires=Mon, 10-Aug-2020 04:43:32 GMT; Max-Age=3600; path=/; domain=www.magen.com; HttpOnly"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"63etd64dsvsloxafdci53reyd78d1kba\"\n}"
+				}
+			]
+		},
+		{
+			"name": "View wechat pay result",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer gf5ceonaybtibm4e5o31zdklubx5gr8k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/rest/{{version}}/wbt/wechat/pay_res?orderid=000000009",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"rest",
+						"{{version}}",
+						"wbt",
+						"wechat",
+						"pay_res"
+					],
+					"query": [
+						{
+							"key": "orderid",
+							"value": "000000009",
+							"description": "Order Id"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "View wechat pay result",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "X-Requested-With",
+								"value": "XMLHttpRequest",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer gf5ceonaybtibm4e5o31zdklubx5gr8k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/rest/{{version}}/wbt/wechat/pay_res?orderid=000000009",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rest",
+								"{{version}}",
+								"wbt",
+								"wechat",
+								"pay_res"
+							],
+							"query": [
+								{
+									"key": "orderid",
+									"value": "000000009",
+									"description": "订单号"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.16.1"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 10 Aug 2020 03:36:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.2.31"
+						},
+						{
+							"key": "Expires",
+							"value": "Thu, 19 Nov 1981 08:52:00 GMT"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-store, no-cache, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "PHPSESSID=115ad8f6265b5c3c06ca4219318b85a0; expires=Mon, 10-Aug-2020 04:36:57 GMT; Max-Age=3600; path=/; domain=test.wenbantong.com.cn; secure; HttpOnly"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": 1,//1：支付回调成功，0：支付回调失败\n    \"message\": \"1\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Wechat Pay",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "text/xml;charset=utf-8"
+					},
+					{
+						"key": "X-Requested-With",
+						"type": "text",
+						"value": "XMLHttpRequest"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer gf5ceonaybtibm4e5o31zdklubx5gr8k"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [],
+					"options": {
+						"formdata": {}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/rest/{{version}}/wbt/wechat/pay",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"rest",
+						"{{version}}",
+						"wbt",
+						"wechat",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Index page（get authKey）",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest",
+						"type": "text"
+					},
+					{
+						"key": "authKey",
+						"value": "6c9667dcf9f003d84dbbc30f5511d7d54e837e478148bb00ab1cdd355d7fe470",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/mobikulhttp/catalog/homePageData?storeId=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"mobikulhttp",
+						"catalog",
+						"homePageData"
+					],
+					"query": [
+						{
+							"key": "storeId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
